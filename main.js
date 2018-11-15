@@ -39,10 +39,14 @@ var humanReadablePosition = userSurnamePositionInarray + 1;
 
 console.log('You\'re nr.' + humanReadablePosition);
 
-//Getting all listItems in an array...
+//Getting all listItems in an array and preparing a winner icon...
 var programmers = document.getElementsByClassName('programmer');
+var winnerIcon =  '<i class="fas fa-medal"></i>';
 
-//to show the final chart!
-for (var i = 0; i < surnames.length; i++) {
+//to show the final chart! 1st position gets a medal!
+programmers[0].innerHTML = winnerIcon + surnames[0];
+
+//all others gets a mention, not everyone can win!
+for (var i = 1; i < surnames.length; i++) {
   programmers[i].innerHTML = surnames[i];
 }
