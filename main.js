@@ -38,3 +38,11 @@ var userSurnamePositionInarray = index;
 var humanReadablePosition = userSurnamePositionInarray + 1;
 
 console.log('You\'re nr.' + humanReadablePosition);
+
+//Getting all listItems in an array...
+var programmers = document.getElementsByClassName('programmer');
+
+//to show the final chart!
+for (var i = 0; i < surnames.length; i++) {
+  programmers[i].innerHTML = surnames[i];
+}

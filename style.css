@@ -5,3 +5,53 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.main_cnt{
+  width: 100vw;
+  height: 100vh;
+  padding:50px;
+  background: grey;
+}
+
+.leaderboard_header, .leaderboard_body {
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+
+}
+
+.leaderboard_header {
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  line-height: 200px;
+  background: white;
+}
+
+.leaderboard_header h1 {
+  margin: 0px 200px;
+  font-family: 'Lobster', cursive;
+}
+.trophy {
+  width:200px;
+  height:200px;
+}
+
+.leaderboard_body ul.chart {
+  padding: 50px 70px;
+  border-radius: 20px;
+  list-style:    decimal;
+  background: white;
+}
+
+ul.chart li {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+  font-size: 25px;
+  font-family: 'Secular One', sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+}
