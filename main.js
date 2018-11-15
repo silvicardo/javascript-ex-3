@@ -15,20 +15,26 @@ console.log('Looks like you can\'t compete, you\'re last! -> ' + surnames);
 surnames.sort();
 console.log('let\'s give it a spin to see if you can get on top\nHere\s the new leaderbord:' + surnames);
 
-//a variable to store the surname position in the array
-var newUserPosition;
-
 //we know your surname must be there so we check
 //until we find it
 //we use an index to track our progress
 var index = 0;
 
-while (surnames[index] != userSurname) {
-  index++;
+//We check your name is not in first position
+//otherwise we would be caught in an infinite loop!
+if (surnames[index] != userSurname) {
+  //then we start the loop!
+  while (surnames[index] != userSurname) {
+    index++;
+  }
 }
 
-//This way index+1 value will correspond to
-//the surname position at the point we exit the loop
-newUserPosition = index + 1;
+//This way index value will correspond to
+//the surname position anyway at this point
+var userSurnamePositionInarray = index;
 
-console.log('You\'re nr.' + newUserPosition);
+//Human readable position in the leaderboard
+//is index alias userSurnamePositionInarray +1
+var humanReadablePosition = userSurnamePositionInarray + 1;
+
+console.log('You\'re nr.' + humanReadablePosition);
